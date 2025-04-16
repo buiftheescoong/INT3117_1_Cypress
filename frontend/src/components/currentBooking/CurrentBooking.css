@@ -1,0 +1,50 @@
+
+
+.current-booking {
+    color: black; /* Chữ màu đen */
+    text-align: center;
+    padding: 20px;
+    height: 800px; /* Tăng chiều cao gấp đôi */
+    display: flex; /* Đảm bảo căn giữa nội dung */
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+  
+  .current-booking h1 {
+    font-size: 2.7em;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: rgba(231, 215, 215, 0.296); /* Nền trắng trong */
+    border: 2px solid black; /* Khung màu đen */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  table td {
+    padding: 15px;
+    border: 1px solid black; /* Đường viền ô màu đen */
+    color: black; /* Chữ màu đen */
+    text-align: center;
+  }
+  
+  table th {
+    padding: 15px;
+    border: 1px solid black; /* Đường viền ô màu đen */
+    color: #00008B; /* Chữ màu đen */
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9); /* Nền nhạt cho header */
+  }
+  
+  table tbody tr:hover {
+    background-color: rgba(220, 220, 220, 0.5); /* Hiệu ứng hover */
+  }
+  

@@ -1,0 +1,53 @@
+.container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .section {
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .step {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .stepTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00008B;
+    margin-bottom: 10px;
+  }
+  
+  .stepDescription {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .stepImage {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
