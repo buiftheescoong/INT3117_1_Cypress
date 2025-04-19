@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "npx cypress run --record --key 32e77bef-a937-4c3a-82b9-cd79a1353123"
   },
   "dependencies": {
     "@babel/runtime": "^7.24.4",

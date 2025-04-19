@@ -13,4 +13,5 @@ export default defineConfig({
       bundler: "vite",
     },
   },
+  projectId: "qv517i"
 });
