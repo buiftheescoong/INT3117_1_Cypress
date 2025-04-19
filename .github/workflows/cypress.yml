@@ -27,7 +27,6 @@ jobs:
       - name: Start Frontend
         run: |
           cd frontend
-          npm run build &
           npm run dev &
         
       - name: Cypress run
@@ -36,9 +35,7 @@ jobs:
         with:
           # Starts web server for E2E tests - replace with your own server invocation
           # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
-          start: |
-            cd frontend
-            npm start
+          start: npm start
           # Records to Cypress Cloud
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           # command: npx cypress run --component
