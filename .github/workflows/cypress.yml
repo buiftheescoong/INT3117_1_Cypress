@@ -17,8 +17,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Kiểm tra thư mục hiện tại
+        run: |
+          pwd
+          ls -la
+          ls -la frontend
+
       - name: Install dependencies
         run: npm install
+
+      - name: Kiểm tra đã cài cypress chưa
+        run: npx cypress --version
         
       - name: Cypress run
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
