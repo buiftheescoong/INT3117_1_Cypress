@@ -13,5 +13,5 @@ export default defineConfig({
       bundler: "vite",
     },
   },
-  projectId: "yvtvqe"
+  projectId: "w7batb"
 });
