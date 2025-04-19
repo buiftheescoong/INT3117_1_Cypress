@@ -18,7 +18,7 @@ const AddPromotion = ({ onSave, onCancel }) => {
         imageUrl: formData.imageUrl,
     }
     const response = await axios.post(
-        "http://localhost:5000/api/promotions/addPromotion",
+        "http://localhost:5001/api/promotions/addPromotion",
         finalData
     );     
 

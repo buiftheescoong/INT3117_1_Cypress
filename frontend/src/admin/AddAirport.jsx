@@ -34,12 +34,12 @@ const AddAirport = ({ onSave, onCancel, initialData}) => {
       if (initialData) {
         // Update existing airport
         await axios.put(
-          `http://localhost:5000/api/airports/updateAirport/${initialData._id}`,
+          `http://localhost:5001/api/airports/updateAirport/${initialData._id}`,
           finalData
         );
       } else {
         // Add new airport
-        await axios.post("http://localhost:5000/api/airports/addAirport", finalData);
+        await axios.post("http://localhost:5001/api/airports/addAirport", finalData);
       }
   
       onSave(formData)

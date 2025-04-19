@@ -26,5 +26,9 @@
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.0",
     "stripe": "^14.24.0"
+  },
+  "devDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

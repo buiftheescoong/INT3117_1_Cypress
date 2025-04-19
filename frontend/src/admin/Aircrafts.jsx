@@ -10,7 +10,7 @@ const Aircrafts = () => {
 
   const fetchAircrafts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/aircrafts/getAllAircrafts");
+      const response = await axios.get("http://localhost:5001/api/aircrafts/getAllAircrafts");
       setAircrafts(response.data); 
     } catch (error) {
       console.error("Error fetching aircrafts:", error);
@@ -18,7 +18,7 @@ const Aircrafts = () => {
   };
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/aircrafts/deleteAircraft/${id}`);
+      await axios.delete(`http://localhost:5001/api/aircrafts/deleteAircraft/${id}`);
       fetchAircrafts(); 
     } catch (error) {
       console.error("Error deleting aircraft:", error);

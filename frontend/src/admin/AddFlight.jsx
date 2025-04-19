@@ -19,7 +19,7 @@ const AddFlight = ({onSave,  onCancel }) => {
     const fetchAircrafts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/aircrafts/getAllAircrafts"
+          "http://localhost:5001/api/aircrafts/getAllAircrafts"
         );
         setAircrafts(response.data);
       } catch (error) {
@@ -30,7 +30,7 @@ const AddFlight = ({onSave,  onCancel }) => {
     const fetchLocations = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/airports/getAllAirports"
+          "http://localhost:5001/api/airports/getAllAirports"
         );
         setLocations(response.data);
       } catch (error) {
@@ -76,7 +76,7 @@ const AddFlight = ({onSave,  onCancel }) => {
         airline: formData.aircraft,
       }
       const response = await axios.post(
-        "http://localhost:5000/api/flights/addFlight",
+        "http://localhost:5001/api/flights/addFlight",
         finalData
       );     
 

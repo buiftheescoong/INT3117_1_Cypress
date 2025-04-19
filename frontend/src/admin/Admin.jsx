@@ -13,7 +13,7 @@ const Admin = () => {
   const fetchPromotions = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/promotions/getAllPromotions"
+        "http://localhost:5001/api/promotions/getAllPromotions"
       );
       setPromotions(response.data);
     } catch (error) {
@@ -22,7 +22,7 @@ const Admin = () => {
   };
   const fetchAircrafts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/aircrafts/getAllAircrafts");
+      const response = await axios.get("http://localhost:5001/api/aircrafts/getAllAircrafts");
       setAircrafts(response.data); 
     } catch (error) {
       console.error("Error fetching aircrafts:", error);
@@ -31,7 +31,7 @@ const Admin = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/bookings/getAllBookings");
+      const response = await axios.get("http://localhost:5001/api/bookings/getAllBookings");
       setBookings(response.data); 
     } catch (error) {
       console.error("Error fetching bookings:", error);
@@ -40,7 +40,7 @@ const Admin = () => {
 
   const fetchFlights = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/flights/getAllFlights");
+      const response = await axios.get("http://localhost:5001/api/flights/getAllFlights");
       setFlights(response.data); 
     } catch (error) {
       console.error("Error fetching flights:", error);

@@ -12,7 +12,7 @@ const Flights = () => {
   
   const fetchFlights = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/flights/getAllFlights");
+      const response = await axios.get("http://localhost:5001/api/flights/getAllFlights");
       setFlights(response.data); 
     } catch (error) {
       console.error("Error fetching flights:", error);

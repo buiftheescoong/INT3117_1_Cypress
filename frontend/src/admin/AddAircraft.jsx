@@ -71,11 +71,11 @@ const AddAircraft = ({ onSave, onCancel, initialData }) => {
           
           if (initialData) {
             await axios.put(
-              `http://localhost:5000/api/aircrafts/updateAircraft/${initialData._id}`,
+              `http://localhost:5001/api/aircrafts/updateAircraft/${initialData._id}`,
               finalData
             );
           } else {
-            await axios.post("http://localhost:5000/api/aircrafts/addAircraft", finalData);
+            await axios.post("http://localhost:5001/api/aircrafts/addAircraft", finalData);
           }
          
           onSave(formData);

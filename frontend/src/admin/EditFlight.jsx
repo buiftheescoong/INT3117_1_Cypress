@@ -38,7 +38,7 @@ const EditFlight = ({ flight, onSave, onCancel }) => {
       };
 
       await axios.put(
-        `http://localhost:5000/api/flights/updateFlight/${flight._id}`,
+        `http://localhost:5001/api/flights/updateFlight/${flight._id}`,
         updatedFlight
       );
 

@@ -10,7 +10,7 @@ const PromotionPage = () => {
   const fetchPromotions = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/promotions/getAllPromotions"
+        "http://localhost:5001/api/promotions/getAllPromotions"
       );
       setPromotions(response.data);
     } catch (error) {
