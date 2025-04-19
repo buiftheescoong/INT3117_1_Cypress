@@ -6,10 +6,10 @@ jobs:
     # Runs tests in parallel with matrix strategy https://docs.cypress.io/guides/guides/parallelization
     # https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
     # Also see warning here https://github.com/cypress-io/github-action#parallel
-    # strategy:
-    #   fail-fast: false # https://github.com/cypress-io/github-action/issues/48
-      # matrix:
-      #   containers: [1, 2] # Uses 2 parallel instances
+    strategy:
+      fail-fast: false # https://github.com/cypress-io/github-action/issues/48
+      matrix:
+        containers: [1, 2] # Uses 2 parallel instances
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           # command: npx cypress run --component
           record: true
-          # parallel: false # Runs test in parallel using settings above
+          parallel: true # Runs test in parallel using settings above
           browser: chrome
           working-directory: frontend
         env:
