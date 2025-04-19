@@ -13,5 +13,5 @@ export default defineConfig({
       bundler: "vite",
     },
   },
-  projectId: "sqrtyq"
+  projectId: "yvtvqe"
 });
