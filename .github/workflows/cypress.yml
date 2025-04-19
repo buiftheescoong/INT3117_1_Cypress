@@ -22,13 +22,13 @@ jobs:
       - name: Start Backend
         run: |
           cd backend
-          npm run dev
+          npm run dev &
 
       - name: Start Frontend
         run: |
           cd frontend
-          npm run build 
-          npm run dev
+          npm run build &
+          npm run dev &
         
       - name: Cypress run
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
