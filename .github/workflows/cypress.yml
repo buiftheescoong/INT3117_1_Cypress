@@ -27,7 +27,7 @@ jobs:
         with:
           # start: npm start
           # command: npx cypress run --component
-          component: true
+          # component: true
           record: true
           browser: chrome
           working-directory: frontend
