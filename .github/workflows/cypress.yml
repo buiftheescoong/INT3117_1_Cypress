@@ -22,12 +22,20 @@ jobs:
           cd frontend
           npm run dev &
         
-      - name: Cypress run
+      - name: Cypress run component testing
         uses: cypress-io/github-action@v6
         with:
-          # start: npm start
-          # command: npx cypress run --component
-          # component: true
+          component: true
+          record: true
+          browser: chrome
+          working-directory: frontend
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cypress run e2e testing
+        uses: cypress-io/github-action@v6
+        with:
           record: true
           browser: chrome
           working-directory: frontend
