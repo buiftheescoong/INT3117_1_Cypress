@@ -30,7 +30,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npm start
-          # command: npx cypress run --component
+          command: npx cypress run --component
           record: true
           parallel: true
           browser: chrome
