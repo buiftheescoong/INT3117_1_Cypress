@@ -21,24 +21,28 @@ jobs:
         run: |
           cd frontend
           npm run dev &
+
+      - name: Check available browsers
+        run: |
+          which chrome || true
+          which chromium || true
+          which firefox || true
         
       - name: Cypress run component testing
         uses: cypress-io/github-action@v6
         with:
           component: true
           record: true
-          browser: chrome
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
-        
+
       - name: Cypress run e2e testing
         uses: cypress-io/github-action@v6
         with:
           record: true
-          browser: chrome
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
