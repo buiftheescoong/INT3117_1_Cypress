@@ -21,18 +21,13 @@ jobs:
         run: |
           cd frontend
           npm run dev &
-
-      - name: Check available browsers
-        run: |
-          which chrome || true
-          which chromium || true
-          which firefox || true
         
       - name: Cypress run component testing
         uses: cypress-io/github-action@v6
         with:
           component: true
           record: true
+          browser: firefox
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -43,6 +38,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
+          browser: firefox
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
