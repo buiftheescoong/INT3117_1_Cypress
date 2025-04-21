@@ -27,7 +27,7 @@ jobs:
         with:
           component: true
           record: true
-          browser: chrome
+          browser: edge
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -38,7 +38,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
-          browser: chrome
+          browser: edge
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
