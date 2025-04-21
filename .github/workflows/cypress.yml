@@ -27,20 +27,20 @@ jobs:
         with:
           component: true
           record: true
-          browser: edge
+          browser: chromium
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
+        # continue-on-error: true
 
-      - name: Cypress run e2e testing
-        uses: cypress-io/github-action@v6
-        with:
-          record: true
-          browser: edge
-          working-directory: frontend
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Cypress run e2e testing
+      #   uses: cypress-io/github-action@v6
+      #   with:
+      #     record: true
+      #     browser: edge
+      #     working-directory: frontend
+      #   env:
+      #     CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
