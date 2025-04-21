@@ -27,7 +27,6 @@ jobs:
         with:
           component: true
           record: true
-          browser: chromium
           working-directory: frontend
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
