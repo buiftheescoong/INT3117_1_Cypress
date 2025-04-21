@@ -13,5 +13,8 @@ export default defineConfig({
       bundler: "vite",
     },
   },
+  retries: {
+    runMode: 2,
+  },
   projectId: "w7batb"
 });
