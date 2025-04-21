@@ -58,6 +58,23 @@ describe('TicketBooking Component', () => {
   
       // Should redirect or hit Stripe
       cy.wait('@mockCheckout');
-    }
+    },
+    
+    it('flaky: waits for Seat Reservation text but sometimes too fast', () => {
+      cy.mount(
+        <MemoryRouter initialEntries={['/ticket-booking/123/Economy']}>
+          <Routes>
+            <Route path="/ticket-booking/:id/:classType" element={<TicketBooking />} />
+          </Routes>
+        </MemoryRouter>
+      );
+    
+      // Random delay để tạo race condition với app render
+      const randomDelay = Math.random() * 1000;
+      cy.wait(randomDelay);
+    
+      // Có thể pass hoặc fail tùy lúc app render nhanh hay chậm
+      cy.contains('Seat Reservation').should('exist');
+    })
   );
   });
