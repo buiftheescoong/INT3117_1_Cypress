@@ -3,9 +3,7 @@ import React from 'react';
 import TicketBooking from '../../src/page/TicketBooking';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-import * as reactRouterDom from 'react-router-dom';
-import * as cloudinaryUtil from '../../src/utils/uploadImageToCloudinary';
-import * as flightRequest from '../../src/clientRequest/GetSpecifiedFlightRequest';
+
 
 describe('TicketBooking Component', () => {
     beforeEach(() => {
