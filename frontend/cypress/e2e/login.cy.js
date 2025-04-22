@@ -52,7 +52,22 @@ describe('Login Page', () => {
         cy.contains('div', 'Invalid email or password', { timeout: 5000 }).should('be.visible');
         cy.url().should('include', '/');
     });
+
+    it('Đăng nhập với email rỗng', () => {
+        cy.get('input[id="email"]').clear();
+        cy.get('input[id="password"]').type('123456');
+        cy.get('button[id="Login"]').click();
+        cy.contains('div', 'Email is required', { timeout: 5000 }).should('be.visible');
+        cy.url().should('include', '/');
+    });
+
+    it('Đăng nhập với password rỗng', () => {
+        cy.get('input[id="email"]').type('user@gmail.com');
+        cy.get('input[id="password"]').clear();
+        cy.get('button[id="Login"]').click();
+        cy.contains('div', 'Password is required', { timeout: 5000 }).should('be.visible');
+        cy.url().should('include', '/');
+    });
     
-  
   })
   
